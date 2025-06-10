@@ -11,12 +11,12 @@
     @NoArgsConstructor
     @AllArgsConstructor
     @Entity
-    public class BookModel {
+    public class bookModel {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
         private String title;
         private Integer publicationYear;
         @ManyToOne
-        private AuthorModel author;
+        private authorModel author;
     }

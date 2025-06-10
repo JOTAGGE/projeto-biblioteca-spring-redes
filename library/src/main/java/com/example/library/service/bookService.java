@@ -1,6 +1,6 @@
     package com.example.library.service;
 
-    import com.example.library.model.BookModel;
+    import com.example.library.model.bookModel;
     import com.example.library.repository.bookRepository;
     import org.springframework.stereotype.Service;
     import java.util.List;
@@ -11,8 +11,8 @@
         public bookService(bookRepository repository) {
             this.repository = repository;
         }
-        public List<BookModel> findAll() { return repository.findAll(); }
-        public BookModel findById(Long id) { return repository.findById(id).orElse(null); }
-        public BookModel save(BookModel book) { return repository.save(book); }
+        public List<bookModel> findAll() { return repository.findAll(); }
+        public bookModel findById(Long id) { return repository.findById(id).orElse(null); }
+        public bookModel save(bookModel book) { return repository.save(book); }
         public void deleteById(Long id) { repository.deleteById(id); }
     }
